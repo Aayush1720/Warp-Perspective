@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("download.jpg")
-width,height = 250,350
-pts1 = np.float32([[161,24],[242,56],[108,151],[186,180]])
+img = cv2.imread("3d.jpg")
+width,height = 400,150
+pts1 = np.float32([[202,54],[976,362],[55,185],[869,539]])
 pts2 = np.float32([[0,0],[width,0],[0,height],[width,height]])
 matrix = cv2.getPerspectiveTransform(pts1,pts2)
 imgOutput = cv2.warpPerspective(img,matrix,(width,height))
